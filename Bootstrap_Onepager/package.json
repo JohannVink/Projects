@@ -1,0 +1,16 @@
+{
+  "name": "bootstrap_onepager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass scss/custom.scss:css/bootstrap-custom.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.5"
+  }
+}
+
