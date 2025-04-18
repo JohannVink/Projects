@@ -1,0 +1,98 @@
+$dark-bg: #292d36;
+$light-text: #fff;
+$operator-bg: #4a536b;
+$equal-bg: #357edd;
+$shadow-color: rgba(0, 0, 0, 0.2);
+$button-bg: #444954;
+$button-hover-bg: #555b69;
+$operator-hover-bg: #5c6782;
+$equal-hover-bg: #4a89e8;
+$display-bg: #333842;
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.calculator {
+    background-color: $dark-bg;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px $shadow-color;
+    padding: 20px;
+    width: 300px;
+    overflow: hidden; 
+}
+
+.display {
+    margin-bottom: 20px;
+    margin-left: -10px; 
+    margin-right: -10px; 
+    padding: 20px;
+    background-color: $display-bg;
+    color: $light-text;
+    text-align: right;
+    font-size: 2rem;
+    border: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.display input {
+    width: 100%; 
+    border: none;
+    background-color: transparent; 
+    color: inherit; 
+    font-size: inherit;
+    text-align: inherit;
+    padding: 0; 
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding-top: 10px; 
+}
+
+.buttons button {
+    padding: 15px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: $button-bg;
+    color: $light-text;
+    box-shadow: 2px 2px 5px $shadow-color;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $button-hover-bg;
+    }
+
+    &.operator {
+        background-color: $operator-bg;
+        &:hover {
+            background-color: $operator-hover-bg;
+        }
+    }
+
+    &.equal {
+        background-color: $equal-bg;
+        grid-column: span 1;
+        &:hover {
+            background-color: $equal-hover-bg;
+        }
+    }
+
+    &.zero {
+        grid-column: span 2;
+    }
+}
